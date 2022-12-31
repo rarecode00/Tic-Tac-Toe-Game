@@ -1,7 +1,7 @@
 if(window.performance.getEntriesByType("navigation")[0].type === 'reload'){
     sessionStorage.clear()
 }
-if(!sessionStorage.getItem('player1')) parent.location = 'start.html'
+if(!sessionStorage.getItem('player1')) window.location.href = 'start.html'
 
 document.getElementById('player-1').innerText = sessionStorage.getItem('player1') + " (X):"
 document.getElementById('player-2').innerText = sessionStorage.getItem('player2') + " (O):"
@@ -93,5 +93,5 @@ document.getElementById('play-again').onclick = function(){
 
 document.getElementById('restart').onclick = function(){
     sessionStorage.clear()
-    parent.location = 'start.html'
+    window.location.href = 'start.html'
 }
